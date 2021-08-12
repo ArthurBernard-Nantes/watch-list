@@ -1,5 +1,5 @@
-<div class='container'>
-  <h1><%= @list.name %></h1>
+<div class='container p-3'>
+  <h1 class='text-center'><%= @list.name %></h1>
 
   <div class="cards">
     <% @list.bookmarks.each do |bookmark| %>
@@ -17,7 +17,7 @@
     <% end %>
   </div>
 
-  <div class='form-content'>
+  <div class='form-content w-50'>
     <%= simple_form_for([@list, @bookmark]) do |f| %>
     <%= f.association :movie %>
     <%= f.input :comment %>
@@ -25,7 +25,9 @@
     <% end %>
   </div>
 
-  <%= link_to "Delete", list_path(@list), method: :delete, data: { confirm: "Are you sure?" } %>
+</div>
+<div class='container justify-content-center pt-3'>
+  <%= link_to "Delete", list_path(@list), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-secondary'%>
 
-  <%= link_to "Back to Lists", lists_path %>
+  <%= link_to "Back to Lists", lists_path, class: 'btn btn-secondary' %>
 </div>

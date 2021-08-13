@@ -12,11 +12,6 @@
 @import "components/index";
 @import "pages/index";
 
-img {
-  height: 150px;
-  width: 150px;
-}
-
 .banner {
   background-size: cover;
   background-position: center;
@@ -34,8 +29,7 @@ img {
 .card-list {
   text-align: center;
   justify-content: center;
-  height: 100px;
-  width: 100px;
+  height: 180px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border: 1px solid rgb(219, 219, 219);
 
@@ -81,4 +75,39 @@ img {
 
 .card-list a {
   color: white;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
